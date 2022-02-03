@@ -1,12 +1,13 @@
 # DNS  
 
-> Takes an input of Website name, performs a DNS lookup, and returns an array of IP addresses.
+> Takes an input of Website name, performs a DNS lookup, and returns an array of IP addresses.  
 
-**Usage:** `Lookup(Website)`  
+### Usage:   
+  - `WebLookup(Website)`  
 
-```go
-func Lookup(Website string) (ip []string) {
-    return ip 
-}
+```go  
+func WebLookup(Website string) (ip []string) {  
+    return ip  
+}  
 ```  
 
