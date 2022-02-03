@@ -8,7 +8,8 @@ import (
 	"strings"
 )
 
-func Lookup(Website string) {
+// Function to resolve a Website (string) to an IP address (string)
+func Lookup(Website string) string {
 
 	ip, err := net.LookupHost(Website)
 
@@ -20,12 +21,6 @@ func Lookup(Website string) {
 
 	fmt.Println(address)
 
-	return
+	return string(address)
 
 }
-
-// func main() {
-// 	site := "dsmith73.duckdns.org"
-// 	Lookup(site)
-
-// }
