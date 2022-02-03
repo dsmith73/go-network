@@ -5,22 +5,15 @@ package dns
 import (
 	"fmt"
 	"net"
-	"strings"
 )
 
-// Function to resolve a Website (string) to an IP address (string)
-func Lookup(Website string) string {
+// Function to resolve a Website (string) to an IP address ([]string)
+// Returns an array of IP if multiple are found.
+func Lookup(Website string) (ip []string) {
 
 	ip, err := net.LookupHost(Website)
-
 	if err != nil {
 		fmt.Println(err)
 	}
-
-	address := strings.Join(ip, "")
-
-	fmt.Println(address)
-
-	return string(address)
-
+	return ip
 }
