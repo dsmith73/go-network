@@ -1,5 +1,4 @@
-// DNS resolution
-
+// DNS resolution  
 package dns
 
 import (
@@ -9,7 +8,7 @@ import (
 
 // Function to resolve a Website (string) to an IP address ([]string)
 // Returns an array of IP if multiple are found.
-func Lookup(Website string) (ip []string) {
+func WebLookup(Website string) (ip []string) {
 
 	ip, err := net.LookupHost(Website)
 	if err != nil {
